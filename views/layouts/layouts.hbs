@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            {{# if loggedin}}
+            Welcome {{userName}}
+            {{else}}
+            NodeJS
+            {{/if}}
+        </title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+    </head>
+    <body class="container">
+        <div class="page--header">
+            <h1>Authentication</h1>
+        </div>
+
+        <nav class="navbar navbar-defualt">
+            <div class="container-fluid">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/signup">Sign Up</a></li>
+                    <li><a href="/dashboard">Register</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                    {{# if loggedin}}
+                    <li><a href="/logout">Logout</a></li>
+                    {{else}}
+                    <li><a href="/login">Login</a></li>
+                    {{/if}}
+
+                    </ul>   
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+            </nav>  
+
+            {{{body}}}
+    </body>
+</html>
